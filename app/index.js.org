@@ -1,0 +1,47 @@
+// E:\programming\Project\latexify\app\index.js
+
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+
+export default function Home() {
+  const [latex, setLatex] = useState('');
+
+  useEffect(() => {
+    if (window.MathJax) {
+      window.MathJax.typesetPromise();
+    }
+  }, [latex]);
+
+  return (
+    <div className="container">
+      <Head>
+        <title>LaTeX Renderer with Next.js</title>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      </Head>
+
+      <textarea
+        id="latex-input"
+        placeholder="LaTeXを入力してください..."
+        value={latex}
+        onChange={(e) => setLatex(e.target.value)}
+      ></textarea>
+      <div id="output" dangerouslySetInnerHTML={{ __html: `\\(${latex}\\)` }}></div>
+
+      <style jsx>{`
+        .container {
+          display: flex;
+          height: 100vh;
+        }
+        #latex-input {
+          flex: 1;
+          padding: 10px;
+        }
+        #output {
+          flex: 1;
+          padding: 10px;
+          border-left: 1px solid #ccc;
+        }
+      `}</style>
+    </div>
+  );
+}

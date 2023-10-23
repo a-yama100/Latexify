@@ -1,3 +1,8 @@
+/* E:\programming\Project\latexify\app\globals.css */
+
+/* app/globals.css */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,4 +29,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.codeStyle {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  font-family: monospace;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
