@@ -1,6 +1,6 @@
 #### 【注意】このコードはサンプルです。高度なセキュリティやエラーハンドリング等は実装されていない場合があります。
 
-このアプリは、 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) を使用してブートストラップされた [Next.js](https://nextjs.org/) のプロジェクトです。このアプリは、LaTeX形式をキレイな数式に変換する機能を持っています。
+このアプリは、 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) を使用し、Bootstrapでデザインされた [Next.js](https://nextjs.org/) のプロジェクトです。このアプリは、LaTeX形式をキレイな数式に変換する機能を持っています。
 
 ## 開始方法
 
